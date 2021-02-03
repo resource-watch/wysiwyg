@@ -1,9 +1,10 @@
-.next/
 node_modules/
 *.log
 .env
 .DS_Store
 .data
 <restPath>/*/*/*/mock/response.txt
-package-lock.json
-yarn.lock
+
+.vscode/
+build/
+homepage/

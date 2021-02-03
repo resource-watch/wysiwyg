@@ -18,27 +18,14 @@
     "sourceType": "module"
   },
   "extends": [
-    "vizzuality"
+    "airbnb"
   ],
   "plugins": [
     "babel"
   ],
   "settings": {
     "import/resolver": {
-      "babel-module": {
-      }
+      "babel-module": {}
     }
-  },
-  "rules": {
-    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
-    "no-unused-expressions": ["error", { "allowShortCircuit": true }],
-    "import/prefer-default-export": 0,
-    "no-return-assign": 0,
-    "comma-dangle": ["error", "never"],
-    "prefer-stateless-function": [0, { "ignorePureComponents": true }],
-    "arrow-body-style": 0,
-    "no-underscore-dangle": 0,
-    "class-methods-use-this": 0,
-    "react/no-array-index-key": 0
   }
 }

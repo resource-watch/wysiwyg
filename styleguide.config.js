@@ -1,25 +1,20 @@
 const path = require('path');
+const webpackConfig = require('./styleguide.webpack.js');
 
 module.exports = {
-  // components: 'components/**/[A-Z]*.js',
+  components: 'lib/**/*.js',
   styleguideComponents: {
-    Wrapper: path.join(__dirname, 'styleguide/Wrapper')
+    Wrapper: path.join(__dirname, 'styleguide/wrapper'),
   },
   sections: [
     {
       name: 'Wysiwyg',
-      components: 'components/Wysiwyg/Wysiwyg.js'
-    }
-    // {
-    //   name: 'UI Components',
-    //   components: 'components/Wysiwyg/UI/**/[A-Z]*.js'
-    // }
+      components: 'lib/Wysiwyg.js',
+    },
   ],
-  showUsage: true,
-  showCode: true,
+  exampleMode: 'expand',
+  usageMode: 'expand',
   showSidebar: false,
-  // Custom webpack config
-  /* eslint-disable */
-  webpackConfig: require('./styleguide.webpack.js'),
-  /* eslint-enable */
+  webpackConfig,
+  styleguideDir: 'homepage',
 };

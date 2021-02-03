@@ -1,19 +1,20 @@
 {
-  "presets": ["next/babel"],
+  "presets": [
+    "@babel/preset-env",
+    "@babel/preset-react"
+  ],
   "plugins": [
     "add-react-displayname",
+    "@babel/plugin-proposal-class-properties",
     [
       "module-resolver", {
         "root": ["."],
         "alias": {
-          "components": "./components",
-          "constants": "./constants",
-          "cosmos": "./cosmos",
-          "css": "./css",
-          "modules": "./modules",
-          "services": "./services",
-          "utils": "./utils"
-        },
+          "components/Wysiwyg": "./lib",
+          "constants": "./lib/constants",
+          "modules": "./lib/modules",
+          "css": "./css"
+        }
     }],
     [
       "wrap-in-js",
